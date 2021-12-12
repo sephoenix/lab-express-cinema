@@ -16,7 +16,10 @@ router.get('/movies/:id', (req, res)=>{
     const {id} = req.params;
     Movie.findById(id)
     .then((film)=>{
-        res.render('detail', {film})
+        res.render('detail', {film: film})
+    })
+    .catch(error=>{
+        console.log('Error detail: ',error)
     })
 })
 

@@ -1,13 +1,10 @@
 <div>
-    <h1>Ironhack Cinema Detail</h1>
-    <a href="/movies">Go back</a>
-    {{#each film}}
-    <img src={{image}}>
-    <h1>{{title}}</h1>
-    <h2>{{director}}</h2>
+    <div><a href="/movies">Go back</a></div>
+    <img src={{film.image}}>
+    <h1>{{film.title}}</h1>
+    <h2>{{film.director}}</h2>
     <h3>Stars</h3>
-    <h4><ul><li>{{stars}}</li></ul></h4>
-    <h4>{{description}}</h4>
-    <h4>{{showtimes}}</h4>
-    {{/each film}}
+    <h4><ul><li>{{film.stars}}</li></ul></h4>
+    <h4>{{film.description}}</h4>
+    <h4>{{film.showtimes}}</h4>
 </div>
